@@ -28,3 +28,31 @@ export interface IUserPost {
     title: string,
     body: string
 }
+
+export interface IUserAlbum {
+    userId: number,
+    id: number,
+    title: string
+}
+
+export interface IUserTodo {
+    userId: number,
+    id: number,
+    title: string,
+    completed: boolean
+}
+
+export interface IPostComment {
+    postId: number,
+    id: number,
+    name: string,
+    email: string,
+    body: string
+}
+export interface IAlbumPhoto {
+    albumId: number,
+    id: number,
+    title: string,
+    url: string,
+    thumbnailUrl: string
+}

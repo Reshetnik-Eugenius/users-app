@@ -13,7 +13,12 @@
 >
   <app-user-info [userInfo]="userInfo">
   </app-user-info>
-  <button (click)="getPosts(userInfo.id)">Show posts</button>
+
+  <div class="button-container">
+    <button (click)="getPosts(userInfo.id)">Show posts</button>
+    <button (click)="getPosts(userInfo.id)">Show albums</button>
+    <button (click)="getPosts(userInfo.id)">Show todos</button>
+  </div>
 
   <div class="user-posts-container">
     <app-user-post  *ngFor="let post of posts"

@@ -2,8 +2,17 @@
     display: flex;
     flex-wrap: wrap;
 }
+
 button {
     width: 200px;
     height: 40px;
-    margin-top: 20px;
+}
+
+.button-container {
+    width: 620px;
+    padding: 20px 10px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
