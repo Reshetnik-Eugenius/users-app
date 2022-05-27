@@ -8,7 +8,7 @@ import { IUserAlbum } from 'src/app/shared/model/user-app.model';
 })
 export class UserAlbumComponent implements OnInit {
 
-  @Input() userAlbum!: IUserAlbum;
+  @Input() album!: IUserAlbum;
 
   constructor() { }
 

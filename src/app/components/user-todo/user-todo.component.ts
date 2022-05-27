@@ -8,7 +8,7 @@ import { IUserTodo } from 'src/app/shared/model/user-app.model';
 })
 export class UserTodoComponent implements OnInit {
 
-  @Input() userTodo!: IUserTodo;
+  @Input() todo!: IUserTodo;
 
   constructor() { }
 
