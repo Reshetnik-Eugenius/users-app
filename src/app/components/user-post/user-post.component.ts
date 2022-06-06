@@ -9,6 +9,7 @@ import { IUserPost } from 'src/app/shared/model/user-app.model';
 export class UserPostComponent implements OnInit {
 
   @Input() post!: IUserPost;
+  // posts: IUserPost[]=[];
   constructor() { }
 
   ngOnInit(): void {

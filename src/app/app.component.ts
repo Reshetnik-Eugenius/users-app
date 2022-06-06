@@ -15,7 +15,18 @@ export class AppComponent implements OnInit{
   albums: IUserAlbum[]=[];
   todos: IUserTodo[]=[];
   
+  info: any;
+  toggle = true;
+
+  public isVisible = true;
+
+  colorBg = "blue";
+  
   title = 'users-app';
+
+  toggleCards() {
+    this.toggle = !this.toggle;
+  }
 
   constructor(private userService: UserService) {}
 
@@ -43,13 +54,18 @@ export class AppComponent implements OnInit{
   getPosts(id: number): void {
     this.userService.getPostsByUserId(id).subscribe((posts: IUserPost[]) => {
       this.posts = posts;
+      this.albums = [];
+      this.todos = [];
       // console.log(posts);
     })
+
   }
 
   getUserAlbums(id: number): void {
     this.userService.getAlbumByUserId(id).subscribe((albums: IUserAlbum[]) => {
       this.albums = albums;
+      this.posts = [];
+      this.todos = [];
       // console.log(albums);
     })
   }
@@ -57,6 +73,8 @@ export class AppComponent implements OnInit{
   getUserTodos(id: number): void {
     this.userService.getTodoByUserId(id).subscribe((todos: IUserTodo[]) => {
       this.todos = todos;
+      this.posts = [];
+      this.albums = [];
       // console.log(todos);
     })
   }
