@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { sanitizeIdentifier } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { IUser, IUserAlbum, IUserPost, IUserTodo } from '../model/user-app.model';
@@ -8,6 +9,7 @@ const URL_API = 'https://jsonplaceholder.typicode.com';
 @Injectable({
   providedIn: 'root'
 })
+  
 export class UserService{
 
   constructor(private http: HttpClient) { }
@@ -29,3 +31,4 @@ export class UserService{
     return this.http.get<IUserTodo[]>(`${URL_API}/users/${id}/todos`);
   }
 }
+
